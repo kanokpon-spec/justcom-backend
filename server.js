@@ -7,6 +7,9 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const cors = require("cors");
+app.use(cors());
+
 const app = express();
 app.use(bodyParser.text({ type: "text/csv" }));
 
